@@ -46,6 +46,13 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-infrastructure -->
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-infrastructure</artifactId>
+            <version>4.2.1.RELEASE</version>
+        </dependency>
+
 
     </dependencies>
 
