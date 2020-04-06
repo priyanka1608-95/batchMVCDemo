@@ -1,15 +1,15 @@
 package com.app;
 
-import com.app.pojo.employee;
+import com.app.pojo.Employee;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-public class EmpFieldSetMapper implements FieldSetMapper<employee>
+public class EmpFieldSetMapper implements FieldSetMapper<Employee>
 {
-    public employee mapFieldSet(FieldSet fieldSet) throws BindException
+    public Employee mapFieldSet(FieldSet fieldSet) throws BindException
     {
-        employee emp=new employee();
+        Employee emp=new Employee();
 
         emp.setId(fieldSet.readInt(0));
         emp.setName(fieldSet.readString(1));

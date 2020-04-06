@@ -12,6 +12,7 @@ public class SpringMvCBatch {
     public static void main(String[] args)
     {
 
+        System.out.println("in main....");
         String[] springConfig  =
                 new String[]{"context.xml", "database.xml",
                         "jobConfig.xml"
