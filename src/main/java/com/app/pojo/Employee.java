@@ -6,12 +6,12 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Employee
+public class employee
 {
     private int id;
     private String name;
     private float salary;
 
-    public Employee() {
-    }
+
+
 }

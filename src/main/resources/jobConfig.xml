@@ -15,7 +15,7 @@
     <batch:job id="Job1">
         <batch:step id="step1">
             <batch:tasklet>
-                <batch:chunk reader="flatFileItemReader" writer="mysqlItemWriter"
+                <batch:chunk reader="flatFileItemReader" writer="mysqlItemWriter" processor="customprocessor"
                              commit-interval="2">
                 </batch:chunk>
             </batch:tasklet>
@@ -37,7 +37,7 @@
                 <property name="lineTokenizer">
                     <!-- A tokenizer class to be used when items in input record are separated by specific characters -->
                     <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
-                        <property name="delimiter" value="," />
+                        <property name="delimiter" value="#~" />
                     </bean>
                 </property>
 
@@ -58,6 +58,8 @@
             <bean class = "org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider" />
         </property>
     </bean>
+
+    <bean id="customprocessor" class="com.app.CustomItemProcessor"/>
 
 
 </beans>
